@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mostly Local — Inventory</title>
+<meta name="description" content="Mostly Local inventory: furniture and larger items available for pickup." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1115; --card:#161922; --muted:#8a94a6; --brand:#61d095; --brand-2:#f5c14b; --text:#e9eef6;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:linear-gradient(180deg,#0c0e13,#0f1115 40%,#0f1115 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:24px}
+  header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(15,17,21,.7);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+  .brand .logo{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 180deg,var(--brand),#86e7b4,#b1ffd3,var(--brand));display:grid;place-items:center;color:#0b0d11;font-weight:900}
+  .nav a{opacity:.9;padding:10px 14px;border-radius:10px}
+  .nav a:hover{background:rgba(255,255,255,.06)}
+  h1{font-family:Montserrat,Inter,system-ui; font-size:clamp(28px,5.5vw,44px); margin:18px 0 6px}
+  .muted{color:var(--muted)}
+  .small{font-size:12px;color:var(--muted)}
+  .section{padding:26px 0}
+
+  /* Gallery */
+  .grid{display:grid;gap:18px}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  @media (max-width: 900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
+  @media (max-width: 560px){.grid.cols-3{grid-template-columns:1fr}}
+
+  .card{background:linear-gradient(180deg,#131723,#121520);border:1px solid rgba(255,255,255,.06);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.35);overflow:hidden}
+  .item-img{display:block;width:100%;height:260px;object-fit:cover;background:#0b0d11}
+  .item-body{padding:14px 16px}
+  .item-title{margin:0 0 6px;font-size:18px;font-weight:700}
+  .price{font-weight:800}
+  .meta{color:var(--muted);font-size:12px}
+
+  /* Sold ribbon */
+  .sold{position:relative}
+  .sold::after{
+    content:"SOLD";
+    position:absolute; top:12px; right:-36px; transform:rotate(35deg);
+    background:linear-gradient(180deg,#f36d6d,#c83d3d);
+    color:#fff; font-weight:800; letter-spacing:.5px;
+    padding:4px 40px; box-shadow:0 8px 18px rgba(0,0,0,.35);
+  }
+
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:100}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:92vw;max-height:86vh;border-radius:14px;border:1px solid rgba(255,255,255,.15)}
+  .lb-close{position:fixed;top:14px;right:16px;background:#11131a;border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 12px;border-radius:10px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand"><div class="logo">ML</div> Mostly Local</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="inventory.html" aria-current="page">Inventory</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h1>Inventory</h1>
+    <p class="muted">Photos + details for larger items available for pickup. DM or use the form on the Home page to claim an item. Items marked “Sold” may have similar replacements coming soon.</p>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="section">
+    <div class="grid cols-3">
+
+      <!-- EXAMPLE ITEM 1 -->
+      <article class="card">
+        <a href="img/inventory/midcentury-dresser.jpg" class="lb">
+          <img class="item-img" loading="lazy" src="img/inventory/midcentury-dresser.jpg" alt="Mid-century 6-drawer dresser, teak look">
+        </a>
+        <div class="item-body">
+          <div class="item-title">Mid-century Dresser</div>
+          <div class="price">$140</div>
+          <div class="meta">Pickup in Hampden • 60” W × 30” H</div>
+        </div>
+      </article>
+
+      <!-- EXAMPLE ITEM 2 (SOLD) -->
+      <article class="card sold">
+        <a href="img/inventory/knit-couch.jpg" class="lb">
+          <img class="item-img" loading="lazy" src="img/inventory/knit-couch.jpg" alt="Cozy knitted couch, off-white">
+        </a>
+        <div class="item-body">
+          <div class="item-title">Cozy Knitted Couch</div>
+          <div class="price">$180</div>
+          <div class="meta">Smoke-free • Minor wear</div>
+        </div>
+      </article>
+
+      <!-- EXAMPLE ITEM 3 -->
+      <article class="card">
+        <a href="img/inventory/rocking-chair.jpg" class="lb">
+          <img class="item-img" loading="lazy" src="img/inventory/rocking-chair.jpg" alt="Wooden rocking chair">
+        </a>
+        <div class="item-body">
+          <div class="item-title">Wooden Rocking Chair</div>
+          <div class="price">$45</div>
+          <div class="meta">Gently creaky (in a charming way)</div>
+        </div>
+      </article>
+
+      <!-- Add more items by copy/pasting an <article> block and changing src/alt/title/price/meta. -->
+
+    </div>
+  </section>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+  <button class="lb-close" id="lbClose" aria-label="Close">Close ✕</button>
+  <img id="lbImg" alt="">
+</div>
+
+<script>
+  // Simple lightbox
+  (function () {
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbClose = document.getElementById('lbClose');
+
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest('a.lb');
+      if (!a) return;
+      e.preventDefault();
+      lbImg.src = a.getAttribute('href');
+      lb.classList.add('open');
+    });
+
+    function closeLB(){ lb.classList.remove('open'); lbImg.removeAttribute('src'); }
+    lbClose.addEventListener('click', closeLB);
+    lb.addEventListener('click', function(e){ if(e.target === lb) closeLB(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLB(); });
+  })();
+</script>
+</body>
+</html>
