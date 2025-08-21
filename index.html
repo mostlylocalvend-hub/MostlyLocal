@@ -79,52 +79,44 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div>
-        <span class="badge">One‑month pop‑up • August 2025</span>
+<section class="hero">
+  <!-- LEFT: Title card + QR -->
+  <div>
+    <span class="badge">One‑month pop‑up • August 2025</span>
 
-          <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-  <h1 class="title">Re-use Thrift Event ♻️ </h1>
-  <img src="img/inventory/MLQR.png" 
-       alt="YARD SALE THIS WEEKEND in Finksburg MD (near Westminster) -- Scan to save website" 
-       style="width:120px; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.3)">
-</div>
-<p class="subtitle">SCAN TO SAVE THE WEBSITE! Mostly Local is a thrifting service run by me, Brach Jaworski. Hot selling items ride in my minivan with me to Movement gyms, where you can catch me climbing or working out and ask to see the merchandise; bigger pieces like couches and dressers are available for pickup at the house.</p>
-     
-          <span>🗓️ Items come off sale <strong>September 1, 2025</strong>. Time left: <span id="countdown" class="countdown">—</span></span>
-        </div>
-        <div class="cta-row">
-          <a class="btn primary" href="#van">Find the Van</a>
-          <a class="btn secondary" href="#contact">Book House Visit</a>
-        </div>
-        <div style="margin-top:10px" class="small">Follow on Instagram for day‑of updates: <a href="#" aria-label="Instagram link">@brachwya</a></div>
-      </div>
-      <div class="card" style="padding:18px">
-        <div class="pill">This week’s highlights</div>
-        <div class="grid cols-2 shop-cards" style="margin-top:12px">
-          <div class="card">
-            <div class="tag">van drop</div>
-            <h3>Wii Console + Starter Set, large selection of games</h3>
-            <div class="muted small">From $100 - Gaming Console with two controllers + MotionPlus attachment + JoyCon attachments • great condition, fully operational</div>
-          </div>
-          <div class="card">
-            <div class="tag">van drop</div>
-            <h3>Activewear, Lacrosse gear, Ripsticks, longboards, scooters, ice skates</h3>
-            <div class="muted small">$2–$8 • light-heavy use</div>
-          </div>
-          <div class="card">
-            <div class="tag">van drop</div>
-            <h3>Books, Board Games, Toys, décor</h3>
-            <div class="muted small">$5-$10 • New - light use</div>
-          </div>
-          <div class="card">
-            <div class="tag">house pickup</div>
-            <h3>Cozy Knitted Couch, Wooden Creaky Rocking Chair, Giant Half-Dome Lounging Chair</h3>
-            <div class="muted small">$10-$30 • smoke‑free</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Title + QR side-by-side -->
+    <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin:8px 0 4px;">
+      <h1 class="title" style="margin:0">Re-use Thrift Event ♻️</h1>
+      <img src="img/inventory/MLQR.png"
+           alt="Scan to visit Mostly Local"
+           style="width:120px;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.3)">
+    </div>
+
+    <p class="subtitle">Mostly Local is a thrifting service run by me, Brach Jaworski. Hot selling items ride in my minivan with me to Movement gyms, where you can catch me climbing or working out and ask to see the merchandise; bigger pieces like couches and dressers are available for pickup at the house.</p>
+
+    <div class="notice" role="status" aria-live="polite">
+      <span>🗓️ Items come off sale <strong>September 1, 2025</strong>. Time left: <span id="countdown" class="countdown">—</span></span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn primary" href="#van">Find the Van</a>
+      <a class="btn secondary" href="#contact">Book House Visit</a>
+    </div>
+
+    <div style="margin-top:10px" class="small">
+      Follow on Instagram for day‑of updates: <a href="#" aria-label="Instagram link">@brachwya</a>
+    </div>
+  </div>
+
+  <!-- RIGHT: Flyer (replaces the 'This week’s highlights' card) -->
+  <div class="card" style="padding:0; overflow:hidden">
+    <img
+      src="img/inventory/22-23%20AUG.png"
+      alt="Secondhand Sale — Mostly Local flyer"
+      style="display:block;width:100%;height:100%;max-height:520px;object-fit:cover">
+  </div>
+</section>
+
 
     <section id="how" class="section">
       <h2>How it works</h2>
