@@ -153,9 +153,9 @@
   </p>
   <div class="grid cols-3">
     <article class="card" style="padding:18px">
-      <div class="pill">Movement Timonium</div>
-      <h3 style="margin:10px 0 4px"> This Tuesday the 26th • 5-9:30 PM</h3>
-      <p class="muted small">1930 Greenspring Dr, Timonium, MD 21093</p>
+      <div class="pill">Movement Hampden</div>
+      <h3 style="margin:10px 0 4px"> Wednesdays and Fridays 5-10 PM </h3>
+      <p class="muted small">1700 W 41st St #440, Baltimore, MD 21211</p>
       <ul class="small">
         <li>Feel free to approach me and ask about Mostly Local</li>
         <li>Venmo/PayPal/Zelle/CashApp/Cash</li>
@@ -163,18 +163,17 @@
     </article>
     <article class="card" style="padding:18px">
       <div class="pill">Movement Columbia</div>
-      <h3 style="margin:10px 0 4px"> This Wednesday the 27th • 5-9:30pm </h3>
+      <h3 style="margin:10px 0 4px"> • Mondays 5-10 PM </h3>
       <p class="muted small">7125 Columbia Gateway Dr, Columbia, MD</p>
       <ul class="small">
         <li>Feel free to approach me and ask about Mostly Local</li>
         <li>Venmo/PayPal/Zelle/CashApp/Cash</li>
       </ul>
     </article>
-
-        <article class="card" style="padding:18px">
-      <div class="pill">Movement Hampden</div>
-      <h3 style="margin:10px 0 4px"> This Thursday the 28th, 5-9:30 PM </h3>
-      <p class="muted small">1700 W 41st St #440, Baltimore, MD 21211</p>
+    <article class="card" style="padding:18px">
+      <div class="pill">Movement Timonium</div>
+      <h3 style="margin:10px 0 4px"> Tuesdays • 5-10 PM</h3>
+      <p class="muted small">1930 Greenspring Dr, Timonium, MD 21093</p>
       <ul class="small">
         <li>Feel free to approach me and ask about Mostly Local</li>
         <li>Venmo/PayPal/Zelle/CashApp/Cash</li>
@@ -269,44 +268,11 @@
 <article class="card"><img loading="lazy" src="img/inventory/IMG-20250820-WA0025.jpg" alt="Item 0025" style="width:100%;height:auto;border-radius:12px;"></article>
 <article class="card"><img loading="lazy" src="img/inventory/IMG-20250820-WA0026.jpg" alt="Item 0026" style="width:100%;height:auto;border-radius:12px;"></article>
 
-    
 <!-- Poster-style image -->
-<article class="card"><img loading="lazy" src="img/inventory/MLQR.png" alt="Secondhand Sale Poster" style="width:100%;height:auto;border-radius:12px;"></article>
+<article class="card"><img loading="lazy" src="img/inventory/22-23 AUG.png" alt="Secondhand Sale Poster" style="width:100%;height:auto;border-radius:12px;"></article>
 
   </div>
 </section>
-
-
-    <!-- EXTRA PHOTO DUMP: Aug 20 batch -->
-<section id="more-items-aug20" class="section">
-  <h2>More Items (Aug 20 Upload)</h2>
-  <div id="photo-dump-aug20" class="grid cols-3"></div>
-</section>
-
-<script>
-  (function() {
-    const dump = document.getElementById("photo-dump-aug20");
-
-    // IMG-20250820-WA0026.jpg → IMG-20250820-WA0099.jpg
-    for (let i = 26; i <= 99; i++) {
-      const num = String(i).padStart(4, "0");
-      const filename = `img/inventory/IMG-20250820-WA${num}.jpg`;
-
-      const article = document.createElement("article");
-      article.className = "card";
-
-      const img = document.createElement("img");
-      img.loading = "lazy";
-      img.src = filename;
-      img.alt = `Item ${num}`;
-      img.style = "width:100%;height:auto;border-radius:12px;";
-
-      article.appendChild(img);
-      dump.appendChild(article);
-    }
-  })();
-</script>
-
 
 <!-- ===== CONTACT CTA UNDER DUMP ===== -->
 <section id="contact-bottom" class="section">
